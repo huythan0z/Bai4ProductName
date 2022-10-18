@@ -1,0 +1,4 @@
+repository "BAI1@devfast1@cloud"
+  path "/"
+    br "/main"
+    co "/main"
