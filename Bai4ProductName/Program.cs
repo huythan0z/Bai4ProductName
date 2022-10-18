@@ -122,25 +122,22 @@ namespace Bai4ProductName
             }
             return list;
         }
-        static List<Product> IDtoName(string name)
-        {
-            return null;
-        }
         
         static List<Product> sortByCategoryName(Product[] product, Category[] categories)
         {
             List<Product> list = new List<Product>();
             List<Category> listCate = new List<Category>();
-            Product a;
-            for (int i = 0; i < product.Length; i++)
+           
+            for (int i = 1; i < product.Length; i++)
             {
-                for (int j = i + 1; j < product.Length; j++)
+                Product value = product[i];
+                int pos = i;
+                while (pos > 0 && product[pos - 1].CategoryId < value.CategoryId)
                 {
-                    if (categories[i].Name.Count() > categories[j].Name.Count())
-                    {
-
-                    }
+                    product[pos] = product[pos - 1];
+                    pos--;
                 }
+                product[pos] = value;
             }
 
             for (int i = 0; i < product.Length; i++)
