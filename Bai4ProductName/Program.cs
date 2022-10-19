@@ -144,7 +144,6 @@ namespace Bai4ProductName
             //        pos--;
             //    }
             //    product[pos] = currentProduct;
-
             //}
             int temp;
             for (int i = 0; i < product.Length; i++)
